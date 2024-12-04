@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  margin: 0;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+sup {
+  display: inline-block;
+}
+
+.signin {
+  background-color: #f1f1f1;
+  padding: 2rem;
+  margin-bottom: 50px;
+}
+
+.title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-top: 10px;
+}
+
+.signin label {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+
+
+
+button {
+  border: none;
+  padding: 8px;
+  border-radius: 10px;
+  transition: background-color .4s;
+  min-width: 100px;
+}
+button:hover {
+  background-color: white;
+}
+
+
+.signUp_content {
+  background-color: #f1f1f1;
+  margin-bottom: 80px;
+  padding: 2rem;
+}
+
+.signUp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.input {
+  padding: 8px;
+  border: none;
+  border-radius: 10px;
+}
+
+.input_box {
+  display: flex;
+  gap: 16px;
+}
+
+.input_box:not(:last-child) {
+  margin-bottom: 15px;
+}
+
+.signUp .label {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.label {
+  font-size: 13px;
+}
+
+.gender {
+  display: flex;
+  gap: 12px;
+}
+
+.mantine-Radio-inner,
+.mantine-Radio-body {
+  width: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.radio_box * {
+  display: flex;
+  justify-content: space-between;
+}
+
+.text-input.error label {
+  color: red; /* Цвет текста при ошибке */
+}
+
+.error-message {
+  color: red; /* Дополнительное сообщение об ошибке */
+}
