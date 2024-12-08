@@ -26,8 +26,6 @@ export function TextInput({
     throw new Error('Ошибка в useContext-e');
   }
 
-  const { isError } = context
-
   const labelText = `${label}${required ? '*' : ''}`;
   return (
     <div className="input_box">

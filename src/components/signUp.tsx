@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useRef } from 'react';
 import { SignContext } from '../useContext';
 import { TextInput } from './nameInput';
 
@@ -14,6 +14,8 @@ export function Signup() {
     setGender,
   } = context;
 
+  const formRef = useRef<HTMLFormElement | null>(null)
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     let name = (e.currentTarget.elements.namedItem('name') as HTMLInputElement).value;
@@ -23,10 +25,11 @@ export function Signup() {
     let password = e.currentTarget.password.value
     let confirmPassword = e.currentTarget.confirmPassword.value
     let signUpData = { name, nickname, email, gender, password, confirmPassword }
-    
+
     if (password === confirmPassword) {
       setUsers([signUpData]);
       console.log(signUpData);
+      formRef.current?.reset()
     } else {
       alert('Пароли не совпадают');
     }
@@ -35,7 +38,7 @@ export function Signup() {
   return (
     <div className='signUp_content'>
     <h1 className="title">Регистрация</h1>
-    <form className='signUp' onSubmit={handleSubmit}>
+    <form className='signUp' onSubmit={handleSubmit} ref={formRef}>
       <TextInput
         label="Имя"
         placeHolder='Ваше Имя'
